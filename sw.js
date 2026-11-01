@@ -1,6 +1,6 @@
 // Guarda as páginas e imagens para o app abrir mesmo sem internet.
 // Os vídeos são grandes e vêm sempre da internet.
-const CACHE = 'stef-v8';
+const CACHE = 'stef-v9';
 const FILES = ['./', 'index.html', 'i18n-en.js', 'manifest.json',
   ...['logo.png','icon-192.png','icon-512.png','apple-touch-icon.png','entrevista-capa.jpg','saude-comunitaria-capa.jpg'].map(f => 'img/' + f)];
 
