@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instituto Stef</title>
+<meta name="description" content="Instituto Stef: tecnologia, educação, saúde e esporte.">
+<meta name="theme-color" content="#0b5fa5">
+<link rel="manifest" href="manifest.json">
+<style>
+:root{--azul:#0b5fa5;--escuro:#0a2540;--claro:#eef5fb;--txt:#1b2733;--verde:#1f9d6b}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;color:var(--txt);background:#fff;line-height:1.55}
+header{position:sticky;top:0;z-index:10;background:var(--escuro);color:#fff;display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap}
+header b{font-size:1.15rem;margin-right:auto}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:#cfe3f5;text-decoration:none;font-size:.92rem}
+nav a:hover{color:#fff}
+.lang button{background:transparent;border:1px solid #6b8db0;color:#fff;padding:4px 10px;border-radius:6px;cursor:pointer}
+.lang button.on{background:#fff;color:var(--escuro)}
+.hero{background:linear-gradient(135deg,var(--azul),var(--escuro));color:#fff;padding:64px 20px;text-align:center}
+.hero h1{margin:0 0 10px;font-size:clamp(1.8rem,5vw,3rem)}
+.hero p{max-width:640px;margin:0 auto 22px;font-size:1.1rem;color:#d9e9f7}
+.btn{display:inline-block;background:var(--verde);color:#fff;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:600}
+section{padding:48px 20px;max-width:1000px;margin:auto}
+section.alt{background:var(--claro);max-width:none}
+section.alt>div{max-width:1000px;margin:auto}
+h2{color:var(--escuro);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card{background:#fff;border:1px solid #dbe6f0;border-radius:14px;padding:20px}
+.card .ic{font-size:2rem}
+.card h3{margin:.4rem 0}
+.ph{background:#e3edf6;border:2px dashed #9db8d1;border-radius:14px;min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;color:#4a6580;font-size:.9rem}
+video{width:100%;border-radius:14px;background:#000}
+form{display:grid;gap:10px;max-width:480px}
+input,textarea{padding:11px;border:1px solid #b9cadb;border-radius:8px;font:inherit}
+button.send{background:var(--azul);color:#fff;border:0;padding:12px;border-radius:8px;font-weight:600;cursor:pointer}
+footer{background:var(--escuro);color:#9fb7cf;text-align:center;padding:24px 16px;font-size:.9rem}
+.nota{font-size:.8rem;color:#6b7f92}
+</style>
+</head>
+<body>
+<header>
+  <b>Instituto Stef</b>
+  <nav>
+    <a href="#sobre" data-i="n_sobre"></a><a href="#areas" data-i="n_areas"></a><a href="#saude" data-i="n_saude"></a><a href="#videos" data-i="n_videos"></a><a href="#contato" data-i="n_contato"></a>
+  </nav>
+  <div class="lang"><button data-l="pt">PT</button> <button data-l="en">EN</button></div>
+</header>
+
+<div class="hero">
+  <h1 data-i="h_titulo"></h1>
+  <p data-i="h_sub"></p>
+  <a class="btn" href="#contato" data-i="h_btn"></a>
+</div>
+
+<section id="sobre">
+  <h2 data-i="s_titulo"></h2>
+  <p data-i="s_txt"></p>
+</section>
+
+<section class="alt" id="areas"><div>
+  <h2 data-i="a_titulo"></h2>
+  <div class="grid">
+    <div class="card"><div class="ic">💻</div><h3 data-i="a1"></h3><p data-i="a1t"></p></div>
+    <div class="card"><div class="ic">📚</div><h3 data-i="a2"></h3><p data-i="a2t"></p></div>
+    <div class="card"><div class="ic">❤️</div><h3 data-i="a3"></h3><p data-i="a3t"></p></div>
+    <div class="card"><div class="ic">⚽</div><h3 data-i="a4"></h3><p data-i="a4t"></p></div>
+  </div>
+</div></section>
+
+<section id="saude">
+  <h2 data-i="sa_titulo"></h2>
+  <p data-i="sa_txt"></p>
+  <div class="grid" id="acoes"></div>
+</section>
+
+<section class="alt" id="videos"><div>
+  <h2 data-i="v_titulo"></h2>
+  <div class="grid" id="lista-videos"></div>
+  <p class="nota" data-i="v_nota"></p>
+</div></section>
+
+<section id="contato">
+  <h2 data-i="c_titulo"></h2>
+  <p data-i="c_txt"></p>
+  <p><a href="https://www.instagram.com/institutostef/" target="_blank" rel="noopener">Instagram @institutostef</a> · <a href="https://institutostef.ong.br" target="_blank" rel="noopener">institutostef.ong.br</a></p>
+  <form onsubmit="return enviar(this)">
+    <input name="nome" required data-p="c_nome">
+    <input name="email" type="email" required data-p="c_email">
+    <textarea name="msg" rows="4" required data-p="c_msg"></textarea>
+    <button class="send" data-i="c_enviar"></button>
+  </form>
+</section>
+
+<footer>© Instituto Stef · <span data-i="f_txt"></span></footer>
+
+<script>
+const T={
+pt:{n_sobre:"Sobre",n_areas:"Áreas",n_saude:"Saúde",n_videos:"Vídeos",n_contato:"Contato",
+h_titulo:"Tecnologia, educação, saúde e esporte",h_sub:"Fazendo para você e com você.",h_btn:"Fale conosco",
+s_titulo:"Sobre o Instituto",s_txt:"[TEXTO DE EXEMPLO] O Instituto Stef é uma organização que atua com tecnologia, educação, saúde e esporte, levando apoio e oportunidades às pessoas. Troque este texto pelo texto oficial.",
+a_titulo:"Nossas áreas",a1:"Tecnologia",a1t:"Soluções digitais para apoiar a saúde pública.",a2:"Educação",a2t:"Aprendizado e formação para a comunidade.",a3:"Saúde",a3t:"Ações de cuidado e acompanhamento de tratamentos.",a4:"Esporte",a4t:"Atividades que unem e fazem bem.",
+sa_titulo:"Ações de saúde",sa_txt:"Veja as ações de saúde do instituto.",
+v_titulo:"Vídeos",v_nota:"Os espaços acima aguardam os vídeos oficiais do instituto.",
+c_titulo:"Contato",c_txt:"Quer conhecer o trabalho ou apoiar? Escreva para nós.",c_nome:"Seu nome",c_email:"Seu e-mail",c_msg:"Mensagem",c_enviar:"Enviar",f_txt:"Feito com carinho",
+acao:"Ação de saúde (exemplo)",video:"Vídeo (em breve)"},
+en:{n_sobre:"About",n_areas:"Areas",n_saude:"Health",n_videos:"Videos",n_contato:"Contact",
+h_titulo:"Technology, education, health and sports",h_sub:"Made for you and with you.",h_btn:"Contact us",
+s_titulo:"About the Institute",s_txt:"[SAMPLE TEXT] Instituto Stef works with technology, education, health and sports, bringing support and opportunities to people. Replace this with the official text.",
+a_titulo:"Our areas",a1:"Technology",a1t:"Digital solutions supporting public health.",a2:"Education",a2t:"Learning and training for the community.",a3:"Health",a3t:"Care actions and treatment follow-up.",a4:"Sports",a4t:"Activities that bring people together.",
+sa_titulo:"Health actions",sa_txt:"See the institute's health actions.",
+v_titulo:"Videos",v_nota:"The spaces above are waiting for the institute's official videos.",
+c_titulo:"Contact",c_txt:"Want to know our work or support us? Write to us.",c_nome:"Your name",c_email:"Your e-mail",c_msg:"Message",c_enviar:"Send",f_txt:"Made with care",
+acao:"Health action (sample)",video:"Video (coming soon)"}};
+// Para adicionar conteúdo real: coloque o arquivo em videos/ ou img/ e inclua na lista.
+const VIDEOS=[];   // ex.: {src:"videos/acao1.mp4"}
+const ACOES=[];    // ex.: {img:"img/acao1.jpg",pt:"Título",en:"Title"}
+let L=localStorage.getItem("lang")||(navigator.language.startsWith("en")?"en":"pt");
+function render(){
+  document.documentElement.lang=L==="en"?"en":"pt-BR";
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[L][e.dataset.i]);
+  document.querySelectorAll("[data-p]").forEach(e=>e.placeholder=T[L][e.dataset.p]);
+  document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.l===L));
+  document.getElementById("acoes").innerHTML=(ACOES.length?ACOES:[1,2,3]).map(a=>a.img?`<div class="card"><img src="${a.img}" style="width:100%;border-radius:10px" alt=""><h3>${a[L]}</h3></div>`:`<div class="ph">${T[L].acao}</div>`).join("");
+  document.getElementById("lista-videos").innerHTML=(VIDEOS.length?VIDEOS:[1,2]).map(v=>v.src?`<video controls preload="metadata" src="${v.src}"></video>`:`<div class="ph">${T[L].video}</div>`).join("");
+}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem("lang",L)}catch(e){}render()});
+function enviar(f){const d=new FormData(f);location.href="mailto:contato@institutostef.ong.br?subject="+encodeURIComponent("Site - "+d.get("nome"))+"&body="+encodeURIComponent(d.get("msg")+"\n\n"+d.get("email"));return false}
+render();
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>
