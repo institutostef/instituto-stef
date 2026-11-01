@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Instituto STEF</title>
 <meta name="description" content="Aplicativo do Instituto STEF: saúde, segurança e a palavra do presidente.">
-<meta name="theme-color" content="#eef3fa">
+<meta name="theme-color" content="#f1f5fb">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="img/icon-192.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -14,9 +14,9 @@
 <meta name="apple-mobile-web-app-title" content="Instituto STEF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Exo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef3fa;--card:#fff;--ink:#0b2a5b;--text:#27384f;--muted:#5d6f86;--blue:#1d5fc4;--blue2:#e3eeff;--line:#dbe5f1;--pill:#e4ebf5;--r:22px;--tabh:76px}
+:root{--bg:#f1f5fb;--card:#fff;--ink:#0b2a5b;--text:#27384f;--muted:#5d6f86;--blue:#1d5fc4;--blue2:#e3eeff;--line:#dbe5f1;--pill:#e4ebf5;--r:22px;--tabh:76px}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
 img,video{max-width:100%;display:block}
@@ -28,7 +28,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:10px;padding:calc(env(safe-area-inset-top) + 12px) 18px 10px;background:linear-gradient(var(--bg) 70%,transparent)}
 .brand{display:flex;align-items:center;gap:9px;margin-right:auto}
 .brand img{width:40px;height:40px}
-.brand b{font:800 21px "Exo 2",Inter,sans-serif;letter-spacing:0;color:var(--blue);line-height:1}
+.brand b{font:800 21px Inter,sans-serif;letter-spacing:0;color:var(--blue);line-height:1}
 .brand b{white-space:nowrap}
 .brand small{display:none;font:600 10px Inter;color:var(--muted);letter-spacing:.2px;margin-top:4px}
 .pillbtn{display:flex;align-items:center;gap:6px;height:44px;padding:0 15px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--blue);font-weight:700;font-size:16px;box-shadow:0 4px 14px rgba(11,42,91,.07)}
@@ -42,11 +42,11 @@ button{font:inherit;color:inherit;cursor:pointer}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .pad{padding:0 18px}
 .row-h{display:flex;align-items:center;gap:12px;margin:30px 18px 14px}
-.row-h h2{font-family:"Exo 2",Inter,sans-serif;margin:0;font-size:23px;font-weight:800;color:var(--ink);letter-spacing:-.3px}
+.row-h h2{font-family:Inter,sans-serif;margin:0;font-size:23px;font-weight:800;color:var(--ink);letter-spacing:-.3px}
 .chip{display:inline-flex;align-items:center;gap:4px;padding:7px 16px;border-radius:999px;background:var(--pill);font-weight:700;font-size:14px;letter-spacing:0;color:var(--muted)}
 .chip svg{width:14px;height:14px}
-.eyebrow{font:700 14px "Exo 2",Inter,sans-serif;letter-spacing:.3px;color:var(--blue)}
-h1{font-family:"Exo 2",Inter,sans-serif;font-size:30px;line-height:1.1;margin:6px 0 8px;color:var(--ink);letter-spacing:-.6px;font-weight:800}
+.eyebrow{font:700 14px Inter,sans-serif;letter-spacing:.3px;color:var(--blue)}
+h1{font-family:Inter,sans-serif;font-size:30px;line-height:1.1;margin:6px 0 8px;color:var(--ink);letter-spacing:-.6px;font-weight:800}
 h3{margin:0;font-size:18px;color:var(--ink);font-weight:700;line-height:1.25}
 p{margin:0 0 10px}
 .lead{color:var(--muted);font-size:15.5px}
@@ -72,19 +72,19 @@ p{margin:0 0 10px}
 .pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pcard:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(7,26,58,.92))}
 .pcard>*:not(img){position:relative;z-index:1}
-.pcard b{font:800 22px "Exo 2",Inter,sans-serif}
+.pcard b{font:800 22px Inter,sans-serif}
 .pcard span{font-size:14px;color:#cfe0f7}
 .vcard{flex:0 0 78%;scroll-snap-align:start}
 .vcard .th{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:var(--ink);border:1px solid var(--line)}
 .vcard .th img{width:100%;height:100%;object-fit:cover}
 .dur{position:absolute;right:10px;bottom:10px;background:rgba(7,26,58,.78);color:#fff;font-size:13px;padding:3px 10px;border-radius:8px}
 .tag{position:absolute;right:10px;top:10px;background:var(--blue);color:#fff;font:700 11.5px Inter;padding:4px 10px;border-radius:8px}
-.vcard .k{font:700 14px "Exo 2",Inter,sans-serif;color:var(--blue);margin:12px 0 2px}
+.vcard .k{font:700 14px Inter,sans-serif;color:var(--blue);margin:12px 0 2px}
 .vcard h3{font-size:19px}
 
 /* cartão grande */
 .big{margin:28px 18px 0;border-radius:30px;background:#fff;border:1px solid var(--line);padding:28px 24px;box-shadow:0 14px 34px rgba(11,42,91,.08)}
-.big .eb{font:800 20px "Exo 2",Inter,sans-serif;color:var(--blue);margin-bottom:10px}
+.big .eb{font:800 20px Inter,sans-serif;color:var(--blue);margin-bottom:10px}
 .big h2{margin:0 0 12px;font-size:27px;line-height:1.15;color:var(--ink);font-weight:800;letter-spacing:-.5px}
 .big h2 em{font-style:normal;color:var(--blue)}
 .big p{color:var(--muted);font-size:15.5px}
@@ -149,11 +149,56 @@ p{margin:0 0 10px}
 .mbanner{display:block;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);margin-bottom:12px}
 .mbanner img{width:100%;height:130px;object-fit:cover}
 .mbanner .mb{padding:18px 20px 20px}
-.mbanner b{display:block;font:800 20px/1.25 "Exo 2",Inter,sans-serif;color:var(--ink);margin-bottom:14px}
+.mbanner b{display:block;font:800 20px/1.25 Inter,sans-serif;color:var(--ink);margin-bottom:14px}
 .langs{display:flex;gap:8px;margin-bottom:10px}
 .langs button{flex:1;padding:14px;border-radius:16px;background:#fff;border:1.5px solid var(--line);font-weight:700;color:var(--ink)}
 .langs button.on{border-color:var(--blue);background:var(--blue2);color:var(--blue)}
 .ver{font-size:13px;color:var(--muted);margin:20px 4px 0}
+</style>
+<style id="glass">
+body{background:radial-gradient(900px 520px at 8% -8%,#cfe2ff 0,transparent 60%),radial-gradient(760px 520px at 105% 12%,#dbeaff 0,transparent 58%),radial-gradient(700px 600px at 50% 110%,#e3efff 0,transparent 60%),#f1f5fb;background-attachment:fixed}
+:root{--glass:rgba(255,255,255,.62);--glassb:rgba(255,255,255,.85);--gshadow:0 10px 30px rgba(11,42,91,.10),inset 0 1px 0 rgba(255,255,255,.95)}
+.top{position:sticky;top:8px;margin:calc(env(safe-area-inset-top) + 8px) 12px 0;padding:8px 8px 8px 14px;border-radius:30px;background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(190%);backdrop-filter:blur(24px) saturate(190%);border:1px solid var(--glassb);box-shadow:var(--gshadow)}
+.brand b{font:700 18px/1 Inter,sans-serif;letter-spacing:-.3px;color:var(--ink)}
+.brand img{width:38px;height:38px}
+.pillbtn,.round{background:rgba(255,255,255,.7);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--glassb);box-shadow:inset 0 1px 0 #fff,0 4px 12px rgba(11,42,91,.08)}
+.pillbtn{color:var(--ink);font-weight:600;font-size:15px}
+.pillbtn svg{color:var(--blue)}
+h1{font:700 30px/1.1 Inter,sans-serif;letter-spacing:-.8px;color:var(--ink)}
+.row-h h2{font:700 22px/1.2 Inter,sans-serif;letter-spacing:-.5px;color:var(--ink)}
+.eyebrow{font:600 12.5px Inter,sans-serif;letter-spacing:1.2px;text-transform:uppercase;color:#6b7f9c}
+h3{font-weight:650}
+.chip{background:var(--glass);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--glassb);box-shadow:inset 0 1px 0 #fff;font-weight:600;font-size:13px;color:#4f6482}
+/* carrossel: legenda em vidro */
+.slide{padding:12px;align-items:stretch;text-align:left;border:1px solid rgba(255,255,255,.6);box-shadow:0 22px 50px rgba(11,42,91,.22)}
+.slide:after{background:linear-gradient(transparent 55%,rgba(7,26,58,.45))}
+.slide .cap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 14px 14px 18px;border-radius:22px;background:rgba(255,255,255,.2);-webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%);border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.55)}
+.slide h3{font:700 19px/1.2 Inter,sans-serif;letter-spacing:-.3px;margin:0;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.25)}
+.play{background:#fff;color:var(--ink);padding:10px 16px;font-size:14px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.18);white-space:nowrap;flex:none}
+.dots i.on{background:var(--ink)}
+/* cartões */
+.pcard{border:1px solid rgba(255,255,255,.7);box-shadow:0 14px 30px rgba(11,42,91,.18)}
+.pcard b{font:700 19px Inter,sans-serif;letter-spacing:-.2px;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+.big{background:var(--glass);-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);border:1px solid var(--glassb);box-shadow:var(--gshadow)}
+.big .eb{font:600 13px Inter,sans-serif;letter-spacing:1.2px;text-transform:uppercase;color:#6b7f9c}
+.big h2{font:700 27px/1.15 Inter,sans-serif;letter-spacing:-.8px}
+.big h2 em{color:#3b78d8;font-weight:700}
+.svc,.panel,.stat,.steps li,.chapters button,.mrow,.fig,.langs button,.mbanner,.svc .b{-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.svc,.panel,.stat,.steps li,.chapters button,.mrow,.fig,.mbanner{background:var(--glass);border:1px solid var(--glassb);box-shadow:var(--gshadow)}
+.langs button{background:var(--glass);border:1px solid var(--glassb);box-shadow:inset 0 1px 0 #fff}
+.langs button.on{background:rgba(29,95,196,.12);border-color:rgba(29,95,196,.4)}
+.svc small,.vcard .k{font:600 12.5px Inter,sans-serif;color:#6b7f9c;letter-spacing:.2px}
+.stat b{font:700 26px Inter,sans-serif;color:var(--ink);letter-spacing:-.5px}
+.chapters time,.kv .k{color:#5a76a3}
+.mbanner b{font:700 19px/1.25 Inter,sans-serif;letter-spacing:-.3px}
+.btn{background:linear-gradient(180deg,#3a82f2,#1d5fc4);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 22px rgba(29,95,196,.3);font-weight:600}
+.btn.ghost{background:var(--glass);color:var(--ink);border:1px solid var(--glassb);box-shadow:var(--gshadow)}
+.quote{border-left:3px solid #9db8e2;font-weight:600}
+/* abas de vidro */
+.tabs nav{background:rgba(255,255,255,.58);-webkit-backdrop-filter:blur(28px) saturate(200%);backdrop-filter:blur(28px) saturate(200%);border:1px solid rgba(255,255,255,.85);box-shadow:0 18px 40px rgba(11,42,91,.2),inset 0 1px 0 #fff}
+.tabs a{font-weight:600;color:#47608a}
+.tabs a.on{color:var(--blue);background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(214,230,255,.75));box-shadow:inset 0 1px 0 #fff,0 4px 12px rgba(29,95,196,.18)}
+.sheet{background:rgba(238,244,252,.86);-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px)}
 </style>
 </head>
 <body>
@@ -168,9 +213,9 @@ p{margin:0 0 10px}
 <!-- ============ INÍCIO ============ -->
 <section class="screen" id="tela-inicio" data-t="inicio">
   <div class="car" id="car">
-    <a class="slide" href="#videos" data-play="ent"><img src="img/entrevista-capa.jpg" alt=""><h3>A palavra do presidente</h3><span class="play">▶ Assista agora</span></a>
-    <a class="slide" href="#saude"><img src="img/real-mutirao-aereo.webp" alt=""><h3>Zera Fila</h3><span class="play">Saiba mais</span></a>
-    <a class="slide" href="#seguranca"><img src="img/seg-drone.webp" alt=""><h3>Cidade Digital Inteligente 360</h3><span class="play">Saiba mais</span></a>
+    <a class="slide" href="#videos" data-play="ent"><img src="img/entrevista-capa.jpg" alt=""><div class="cap"><h3>A palavra do presidente</h3><span class="play">▶ Assista agora</span></div></a>
+    <a class="slide" href="#saude"><img src="img/real-mutirao-aereo.webp" alt=""><div class="cap"><h3>Zera Fila</h3><span class="play">Saiba mais</span></div></a>
+    <a class="slide" href="#seguranca"><img src="img/seg-drone.webp" alt=""><div class="cap"><h3>Cidade Digital Inteligente 360</h3><span class="play">Saiba mais</span></div></a>
   </div>
   <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
 
