@@ -153,6 +153,8 @@ const EN = {
 "Estudo técnico Poço Verde Cidade Digital Inteligente 360":"Technical study Poço Verde Smart Digital City 360",
 "Câmeras em via pública":"Cameras on public roads","Central de monitoramento":"Monitoring center",
 "Entrevista":"Interview",
+"STEF animado":"STEF animated",
+"Conheça o Instituto STEF em animação. Duração: 1 min 41 s.":"Get to know Instituto STEF in animation. Length: 1 min 41 s.",
 "A palavra do presidente":"A word from the president",
 "Henrique Pereira":"Henrique Pereira",
 ", presidente do Instituto STEF, conversa com Alana Sobreira sobre o":", president of Instituto STEF, talks with Alana Sobreira about the",
